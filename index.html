@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NivoTV – Stream Smarter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1 class="logo">NivoTV</h1>
+    <nav>
+      <a href="#coming">Coming Soon</a>
+      <a href="#signup">Join</a>
+      <a href="#howto">How to Watch</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="overlay">
+      <h2>All Your Favorites. One Place.</h2>
+      <p>Unlimited access to the best movies and shows.</p>
+      <a href="#signup" class="cta">Create Your Account</a>
+    </div>
+  </section>
+
+  <section id="coming" class="carousel">
+    <h3>Coming Soon</h3>
+    <div class="poster-row">
+      <img src="posters/movie1.jpg" alt="Movie 1"/>
+      <img src="posters/movie2.jpg" alt="Movie 2"/>
+      <img src="posters/movie3.jpg" alt="Movie 3"/>
+      <img src="posters/movie4.jpg" alt="Movie 4"/>
+    </div>
+  </section>
+
+  <section id="signup" class="form-section">
+    <h3>Sign Up for Early Access</h3>
+    <form action="https://formsubmit.co/YOUR_EMAIL" method="POST">
+      <input type="text" name="username" placeholder="Choose Username" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <input type="password" name="password" placeholder="Create Password" required />
+      <button type="submit">Request Access</button>
+    </form>
+    <a href="https://buy.stripe.com/test_XXXX" class="stripe-btn">Proceed to Payment</a>
+  </section>
+
+  <section id="howto" class="how-to">
+    <h3>How to Watch</h3>
+    <ol>
+      <li>Download the <strong>Jellyfin App</strong> from your app store</li>
+      <li>Open the app and click “Add Server”</li>
+      <li>Enter the server address: <code>nivotv.net</code></li>
+      <li>Login with the credentials you chose above</li>
+      <li>Start streaming!</li>
+    </ol>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 NivoTV. All rights reserved.</p>
+  </footer>
+</body>
+</html>
