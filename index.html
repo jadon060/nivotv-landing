@@ -2,62 +2,143 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>NivoTV – Stream Smarter</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NivoTV</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #1a1a2e, #16213e);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    header {
+      width: 100%;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 600px;
+    }
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #c084fc;
+    }
+    .watch-now {
+      background: #5b21b6;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 999px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .form-container, .request-container, .support-container {
+      width: 100%;
+      max-width: 600px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 5px;
+    }
+    p.sub {
+      color: #ccc;
+      margin-bottom: 20px;
+    }
+    input, textarea, button {
+      font-family: inherit;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+    input, textarea {
+      background: #2c2c54;
+      color: white;
+    }
+    button {
+      background: #7c3aed;
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .carousel {
+      display: flex;
+      overflow-x: auto;
+      gap: 10px;
+      margin: 20px 0;
+    }
+    .carousel img {
+      height: 150px;
+      border-radius: 10px;
+    }
+    footer {
+      font-size: 0.9rem;
+      color: #aaa;
+      margin-bottom: 50px;
+    }
+    .form-message {
+      font-size: 0.9rem;
+      color: #34d399;
+      display: none;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1 class="logo">NivoTV</h1>
-    <nav>
-      <a href="#coming">Coming Soon</a>
-      <a href="#signup">Join</a>
-      <a href="#howto">How to Watch</a>
-    </nav>
+    <div class="logo">NivoTV</div>
+    <a href="https://nivotv.com" class="watch-now">Watch Now</a>
   </header>
 
-  <section class="hero">
-    <div class="overlay">
-      <h2>All Your Favorites. One Place.</h2>
-      <p>Unlimited access to the best movies and shows.</p>
-      <a href="#signup" class="cta">Create Your Account</a>
+  <div class="form-container">
+    <h1>Welcome to NivoTV</h1>
+    <p class="sub">Watch Anywhere. Anytime. No Ads.</p>
+    <input type="text" placeholder="Username">
+    <input type="email" placeholder="Email">
+    <input type="password" placeholder="Password">
+    <button onclick="document.getElementById('signup-message').style.display='block'">Get Started</button>
+    <div id="signup-message" class="form-message">Thank you! You're all set to start watching.</div>
+  </div>
+
+  <div class="form-container">
+    <h2>Coming Soon</h2>
+    <div class="carousel">
+      <img src="https://image.tmdb.org/t/p/w300/zrIkN8pz1JXfdNmmfOduL1g0U6Y.jpg" alt="Dune">
+      <img src="https://image.tmdb.org/t/p/w300/qJ2tW6WMUDux911r6m7haRef0WH.jpg" alt="Batman">
+      <img src="https://image.tmdb.org/t/p/w300/ab8dkKZ5fIh1htrRJ5QDwQwifKT.jpg" alt="John Wick">
+      <img src="https://image.tmdb.org/t/p/w300/4Md1Uo1I4k5mVx0Lr7yVZVZzWlo.jpg" alt="The Northman">
     </div>
-  </section>
+  </div>
 
-  <section id="coming" class="carousel">
-    <h3>Coming Soon</h3>
-    <div class="poster-row">
-      <img src="posters/movie1.jpg" alt="Movie 1"/>
-      <img src="posters/movie2.jpg" alt="Movie 2"/>
-      <img src="posters/movie3.jpg" alt="Movie 3"/>
-      <img src="posters/movie4.jpg" alt="Movie 4"/>
-    </div>
-  </section>
+  <div class="request-container">
+    <h2>Request a Movie or Show</h2>
+    <input type="text" placeholder="Title">
+    <input type="text" placeholder="Year (optional)">
+    <input type="text" placeholder="Season (optional)">
+    <input type="text" placeholder="Episode (optional)">
+    <button onclick="document.getElementById('request-message').style.display='block'">Submit Request</button>
+    <div id="request-message" class="form-message">Thanks! We got your request and will review it soon.</div>
+  </div>
 
-  <section id="signup" class="form-section">
-    <h3>Sign Up for Early Access</h3>
-    <form action="https://formsubmit.co/YOUR_EMAIL" method="POST">
-      <input type="text" name="username" placeholder="Choose Username" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <input type="password" name="password" placeholder="Create Password" required />
-      <button type="submit">Request Access</button>
-    </form>
-    <a href="https://buy.stripe.com/test_XXXX" class="stripe-btn">Proceed to Payment</a>
-  </section>
-
-  <section id="howto" class="how-to">
-    <h3>How to Watch</h3>
-    <ol>
-      <li>Download the <strong>Jellyfin App</strong> from your app store</li>
-      <li>Open the app and click “Add Server”</li>
-      <li>Enter the server address: <code>nivotv.net</code></li>
-      <li>Login with the credentials you chose above</li>
-      <li>Start streaming!</li>
-    </ol>
-  </section>
+  <div class="support-container">
+    <h2>Customer Support</h2>
+    <input type="text" placeholder="Username">
+    <input type="email" placeholder="Email">
+    <textarea rows="4" placeholder="Questions or Concerns..."></textarea>
+    <button onclick="document.getElementById('support-message').style.display='block'">Send</button>
+    <div id="support-message" class="form-message">Thank you! Your message has been received.</div>
+  </div>
 
   <footer>
-    <p>&copy; 2025 NivoTV. All rights reserved.</p>
+    Powered by Jellyfin &nbsp;&bull;&nbsp; <a href="#" style="color: #8b5cf6; text-decoration: none;">How to Watch</a>
   </footer>
 </body>
 </html>
