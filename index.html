@@ -133,6 +133,22 @@
       color: #34d399;
       display: none;
     }
+    .how-to-watch-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-top: 10px;
+    }
+    .how-to-watch-links a {
+      color: #8b5cf6;
+      text-decoration: none;
+    }
+    .how-to-connect {
+      font-size: 0.95rem;
+      color: #ccc;
+      margin-top: 10px;
+    }
   </style>
 </head>
 <body>
@@ -146,9 +162,9 @@
     <div class="form-container">
       <h1>Welcome to NivoTV</h1>
       <p class="sub">Watch Anywhere. Anytime. No Ads.</p>
-      <input type="text" placeholder="Username">
-      <input type="email" placeholder="Email">
-      <input type="password" placeholder="Password">
+      <input type="text" placeholder="Username" required>
+      <input type="email" placeholder="Email" required>
+      <input type="password" placeholder="Password" required>
       <button onclick="document.getElementById('signup-message').style.display='block'">Get Started</button>
       <div id="signup-message" class="form-message">Thank you! You're all set to start watching.</div>
     </div>
@@ -168,29 +184,39 @@
         <img src="https://image.tmdb.org/t/p/w300/ab8dkKZ5fIh1htrRJ5QDwQwifKT.jpg" alt="John Wick">
         <img src="https://image.tmdb.org/t/p/w300/4Md1Uo1I4k5mVx0Lr7yVZVZzWlo.jpg" alt="The Northman">
       </div>
+      <p class="how-to-connect">To watch on your devices, download the Jellyfin app and enter <strong>nivotv.com</strong> as your custom server name when prompted. This works for phones, tablets, smart TVs, and streaming boxes.</p>
     </div>
 
     <div class="request-container">
       <h2>Request a Movie or Show</h2>
-      <input type="text" placeholder="Title">
-      <input type="text" placeholder="Year (optional)">
-      <input type="text" placeholder="Season (optional)">
-      <input type="text" placeholder="Episode (optional)">
+      <input type="text" placeholder="Username" required>
+      <input type="email" placeholder="Email" required>
+      <input type="text" placeholder="Title" required>
+      <input type="text" placeholder="Year" required>
+      <input type="text" placeholder="Season" required>
+      <input type="text" placeholder="Episode" required>
       <button onclick="document.getElementById('request-message').style.display='block'">Submit Request</button>
-      <div id="request-message" class="form-message">Thanks! We got your request and will review it soon.</div>
+      <div id="request-message" class="form-message">Thanks! Your request will be met shortly. We'll send you an email when it's ready!</div>
     </div>
 
     <div class="support-container">
       <h2>Customer Support</h2>
-      <input type="text" placeholder="Username">
-      <input type="email" placeholder="Email">
-      <textarea rows="4" placeholder="Questions or Concerns..."></textarea>
+      <input type="text" placeholder="Username" required>
+      <input type="email" placeholder="Email" required>
+      <textarea rows="4" placeholder="Questions or Concerns..." required></textarea>
       <button onclick="document.getElementById('support-message').style.display='block'">Send</button>
       <div id="support-message" class="form-message">Thank you! Your message has been received.</div>
     </div>
 
     <footer>
-      Powered by Jellyfin &nbsp;&bull;&nbsp; <a href="#" style="color: #8b5cf6; text-decoration: none;">How to Watch</a>
+      Powered by Jellyfin
+      <div class="how-to-watch-links">
+        <a href="https://play.google.com/store/apps/details?id=org.jellyfin.mobile">Google Play</a>
+        <a href="https://apps.apple.com/us/app/jellyfin-mobile/id1480192618">App Store</a>
+        <a href="https://apps.microsoft.com/detail/jellyfin/9NBLGGH42THS">Windows</a>
+        <a href="https://f-droid.org/packages/org.jellyfin.mobile/">F-Droid</a>
+        <a href="https://jellyfin.org/docs/general/clients/">More Platforms</a>
+      </div>
     </footer>
   </main>
 </body>
