@@ -123,15 +123,21 @@
       font-size: 1.1rem;
       font-weight: 500;
     }
+    .how-to-connect {
+      background: #1f2937;
+      color: #e0e0ff;
+      padding: 15px;
+      border-left: 5px solid #8b5cf6;
+      font-weight: 500;
+      border-radius: 8px;
+      margin-top: 10px;
+      line-height: 1.6;
+    }
     footer {
       font-size: 0.9rem;
       color: #aaa;
-      margin: 50px 0;
-    }
-    .form-message {
-      font-size: 0.9rem;
-      color: #34d399;
-      display: none;
+      margin: 50px 0 20px;
+      text-align: center;
     }
     .how-to-watch-links {
       display: flex;
@@ -144,10 +150,10 @@
       color: #8b5cf6;
       text-decoration: none;
     }
-    .how-to-connect {
-      font-size: 0.95rem;
-      color: #ccc;
-      margin-top: 10px;
+    .form-message {
+      font-size: 0.9rem;
+      color: #34d399;
+      display: none;
     }
   </style>
 </head>
@@ -184,7 +190,12 @@
         <img src="https://image.tmdb.org/t/p/w300/ab8dkKZ5fIh1htrRJ5QDwQwifKT.jpg" alt="John Wick">
         <img src="https://image.tmdb.org/t/p/w300/4Md1Uo1I4k5mVx0Lr7yVZVZzWlo.jpg" alt="The Northman">
       </div>
-      <p class="how-to-connect">To watch on your devices, download the Jellyfin app and enter <strong>nivotv.com</strong> as your custom server name when prompted. This works for phones, tablets, smart TVs, and streaming boxes.</p>
+      <div class="how-to-connect">
+        To watch on your devices:<br>
+        1. Download the official <strong>Jellyfin</strong> app.<br>
+        2. When prompted, enter <strong>nivotv.com</strong> as your custom server name.<br>
+        Works on iPhone, Android, Smart TVs, Fire Stick, Windows, and more.
+      </div>
     </div>
 
     <div class="request-container">
