@@ -55,15 +55,13 @@
       max-width: 900px;
       padding-top: 30px;
     }
-    .form-container, .request-container, .support-container, .benefits-container {
+    .form-container {
       width: 100%;
       padding: 20px;
       display: flex;
       flex-direction: column;
     }
-    .form-container button,
-    .request-container button,
-    .support-container button {
+    .form-container button {
       background: #7c3aed;
       color: white;
       font-weight: 600;
@@ -105,23 +103,6 @@
       padding: 4px 10px;
       border-radius: 8px;
     }
-    .benefits {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: space-between;
-      margin: 40px 0;
-    }
-    .benefit-box {
-      flex: 1;
-      min-width: 250px;
-      background: #2e2e4e;
-      border-radius: 12px;
-      padding: 20px;
-      text-align: center;
-      font-size: 1.1rem;
-      font-weight: 500;
-    }
     .how-to-connect {
       background: #1f2937;
       color: #e0e0ff;
@@ -162,54 +143,19 @@
     <div class="form-container">
       <h1>Welcome to NivoTV</h1>
       <p class="sub">Watch Anywhere. Anytime. No Ads.</p>
-      <button onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSdhKRSLkAFnjUNSYXAqZv37K7y0RIHylqan2EQFuJpPNEPsGQ/viewform'">Continue to Sign Up</button>
+      <button onclick="window.location.href='https://tally.so/r/mDYErq'">Sign Up with Username & Password</button>
     </div>
-
-    <div class="benefits-container">
-      <div class="benefits">
-        <div class="benefit-box">All-Inclusive Access. Just $4.99/month. Forever.</div>
-        <div class="benefit-box">Stream in HD. No Ads. Instant Playback.</div>
-        <div class="benefit-box">Unlimited Requests. Any Movie or Show. Anytime.</div>
-      </div>
-    </div>
-
-    <div class="form-container">
-      <h2>Trending Now</h2>
-      <div class="carousel">
-        <div class="carousel-item"><span class="poster-number">1</span><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/refs/heads/main/Posters/movie1.jpg" alt="Movie 1"></div>
-        <div class="carousel-item"><span class="poster-number">2</span><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/refs/heads/main/Posters/movie2.jpg" alt="Movie 2"></div>
-        <div class="carousel-item"><span class="poster-number">3</span><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/refs/heads/main/Posters/movie3.jpg" alt="Movie 3"></div>
-        <div class="carousel-item"><span class="poster-number">4</span><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/refs/heads/main/Posters/movie4.jpg" alt="Movie 4"></div>
-        <div class="carousel-item"><span class="poster-number">5</span><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/refs/heads/main/Posters/movie5.jpg" alt="Movie 5"></div>
-      </div>
-      <div class="how-to-connect">
-        To watch on your devices:<br>
-        1. Download the official <strong>Jellyfin</strong> app.<br>
-        2. When prompted, enter <strong>nivotv.com</strong> as your custom server name.<br>
-        Works on iPhone, Android, Smart TVs, Fire Stick, Windows, and more.
-      </div>
-    </div>
-
-    <div class="request-container">
-      <h2>Request a Movie or Show</h2>
-      <button onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSclONF58ClBEcUKru2vBZiUNdZAdR44brNt1-ULK5fXsv9FOw/viewform'">Submit a Movie Request</button>
-    </div>
-
-    <div class="support-container">
-      <h2>Customer Support</h2>
-      <button onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSeX61As2sA-BGiWVqgUQ5mc-tg9M2SMPT08BED8WMn6SsA54Q/viewform'">Contact Support</button>
-    </div>
-
-    <footer>
-      Powered by Jellyfin
-      <div class="how-to-watch-links">
-        <a href="https://play.google.com/store/apps/details?id=org.jellyfin.mobile">Google Play</a>
-        <a href="https://apps.apple.com/us/app/jellyfin-mobile/id1480192618">App Store</a>
-        <a href="https://apps.microsoft.com/detail/jellyfin/9NBLGGH42THS">Windows</a>
-        <a href="https://f-droid.org/packages/org.jellyfin.mobile/">F-Droid</a>
-        <a href="https://jellyfin.org/docs/general/clients/">More Platforms</a>
-      </div>
-    </footer>
   </main>
+
+  <footer>
+    Powered by Jellyfin
+    <div class="how-to-watch-links">
+      <a href="https://play.google.com/store/apps/details?id=org.jellyfin.mobile">Google Play</a>
+      <a href="https://apps.apple.com/us/app/jellyfin-mobile/id1480192618">App Store</a>
+      <a href="https://apps.microsoft.com/detail/jellyfin/9NBLGGH42THS">Windows</a>
+      <a href="https://f-droid.org/packages/org.jellyfin.mobile/">F-Droid</a>
+      <a href="https://jellyfin.org/docs/general/clients/">More Platforms</a>
+    </div>
+  </footer>
 </body>
 </html>
