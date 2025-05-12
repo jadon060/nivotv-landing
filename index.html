@@ -55,7 +55,7 @@
       max-width: 900px;
       padding-top: 30px;
     }
-    .form-container {
+    .form-container, .request-container, .support-container, .benefits-container {
       width: 100%;
       padding: 20px;
       display: flex;
@@ -103,6 +103,23 @@
       padding: 4px 10px;
       border-radius: 8px;
     }
+    .benefits {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-between;
+      margin: 40px 0;
+    }
+    .benefit-box {
+      flex: 1;
+      min-width: 250px;
+      background: #2e2e4e;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
     .how-to-connect {
       background: #1f2937;
       color: #e0e0ff;
@@ -144,6 +161,31 @@
       <h1>Welcome to NivoTV</h1>
       <p class="sub">Watch Anywhere. Anytime. No Ads.</p>
       <button onclick="window.location.href='https://tally.so/r/mDYErq'">Sign Up with Username & Password</button>
+    </div>
+
+    <div class="benefits-container">
+      <div class="benefits">
+        <div class="benefit-box">All-Inclusive Access. Just $4.99/month. Forever.</div>
+        <div class="benefit-box">Stream in HD. No Ads. Instant Playback.</div>
+        <div class="benefit-box">Unlimited Requests. Any Movie or Show. Anytime.</div>
+      </div>
+    </div>
+
+    <div class="form-container">
+      <h2>Trending Now</h2>
+      <div class="carousel">
+        <div class="carousel-item"><span class="poster-number">1</span><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/refs/heads/main/Posters/movie1.jpg" alt="Movie 1"></div>
+        <div class="carousel-item"><span class="poster-number">2</span><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/refs/heads/main/Posters/movie2.jpg" alt="Movie 2"></div>
+        <div class="carousel-item"><span class="poster-number">3</span><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/refs/heads/main/Posters/movie3.jpg" alt="Movie 3"></div>
+        <div class="carousel-item"><span class="poster-number">4</span><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/refs/heads/main/Posters/movie4.jpg" alt="Movie 4"></div>
+        <div class="carousel-item"><span class="poster-number">5</span><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/refs/heads/main/Posters/movie5.jpg" alt="Movie 5"></div>
+      </div>
+      <div class="how-to-connect">
+        To watch on your devices:<br>
+        1. Download the official <strong>Jellyfin</strong> app.<br>
+        2. When prompted, enter <strong>nivotv.com</strong> as your custom server name.<br>
+        Works on iPhone, Android, Smart TVs, Fire Stick, Windows, and more.
+      </div>
     </div>
   </main>
 
