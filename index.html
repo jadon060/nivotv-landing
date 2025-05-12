@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>NivoTV</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Pacifico&display=swap" rel="stylesheet" />
   <style>
     body {
       margin: 0;
@@ -15,6 +15,7 @@
       flex-direction: column;
       align-items: center;
     }
+
     header {
       width: 100%;
       padding: 20px;
@@ -23,10 +24,13 @@
       align-items: center;
       max-width: 900px;
     }
+
     .logo {
-      font-size: 1.8rem;
-      font-weight: bold;
+      font-family: 'Pacifico', cursive;
+      font-size: 2rem;
+      color: #fff;
     }
+
     .watch-now {
       background: #5b21b6;
       border: none;
@@ -36,45 +40,110 @@
       cursor: pointer;
       text-decoration: none;
     }
+
     main {
+      position: relative;
+      z-index: 1;
       width: 100%;
       max-width: 900px;
-      padding-top: 40px;
-      text-align: center;
+      padding-top: 30px;
     }
+
     h1 {
-      font-size: 2.2rem;
+      font-size: 2rem;
+      margin-bottom: 10px;
     }
-    .sub {
+
+    p.sub {
       color: #ccc;
       margin-bottom: 30px;
     }
-    .email-buttons {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      max-width: 500px;
-      margin: 0 auto 60px auto;
-    }
-    .email-buttons a {
-      background: #7c3aed;
+
+    .button {
+      background: #8b5cf6;
+      border: none;
       color: white;
-      padding: 16px;
+      padding: 15px;
+      border-radius: 12px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-bottom: 15px;
+      width: 100%;
+      max-width: 500px;
+      font-size: 1rem;
+    }
+
+    .button:hover {
+      background: #7c3aed;
+    }
+
+    .carousel {
+      display: flex;
+      overflow-x: auto;
+      gap: 15px;
+      margin: 30px 0;
+    }
+
+    .carousel img {
+      height: 200px;
+      border-radius: 10px;
+      position: relative;
+    }
+
+    .carousel-container {
+      width: 100%;
+    }
+
+    .number-label {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      background: black;
+      color: white;
+      padding: 2px 8px;
+      font-weight: bold;
+      font-size: 1.2rem;
+      border-radius: 6px;
+    }
+
+    .benefits {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+      margin: 40px 0;
+    }
+
+    .benefit-box {
+      flex: 1;
+      min-width: 250px;
+      background: #2e2e4e;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
       font-size: 1.1rem;
-      font-weight: 600;
-      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .how-to-connect {
+      background: #1f2937;
+      color: #e0e0ff;
+      padding: 15px;
+      border-left: 5px solid #8b5cf6;
+      font-weight: 500;
       border-radius: 8px;
-      transition: background 0.2s ease;
+      margin: 40px auto;
+      line-height: 1.6;
+      max-width: 800px;
     }
-    .email-buttons a:hover {
-      background: #6b21a8;
-    }
+
     footer {
       font-size: 0.9rem;
       color: #aaa;
       margin: 50px 0 20px;
       text-align: center;
     }
+
     .how-to-watch-links {
       display: flex;
       flex-wrap: wrap;
@@ -82,6 +151,7 @@
       justify-content: center;
       margin-top: 10px;
     }
+
     .how-to-watch-links a {
       color: #8b5cf6;
       text-decoration: none;
@@ -91,46 +161,68 @@
 <body>
   <header>
     <div class="logo">NivoTV</div>
-    <a href="https://nivotv.com" class="watch-now">Watch Now</a>
+    <a href="https://nivotv.com" class="watch-now" target="_blank">Watch Now</a>
   </header>
 
   <main>
     <h1>Welcome to NivoTV</h1>
     <p class="sub">Watch Anywhere. Anytime. No Ads.</p>
 
-    <div class="email-buttons">
-      <a href="mailto:jadonanthonyc@gmail.com?subject=NivoTV Sign-Up Request&body=Please create an account for me.%0AUsername: %0APrivate Phrase: %0AThanks!"
-         target="_blank"
-         >Sign Up with Username & Password</a>
+    <button class="button" onclick="window.open('mailto:jadonanthonyc@gmail.com?subject=NivoTV Sign Up&body=Please enter your contact email, username, and password:', '_blank')">Sign Up with Username & Password</button>
 
-      <a href="mailto:jadonanthonyc@gmail.com?subject=NivoTV Movie/Show Request&body=I'd like to request the following content:%0ATitle: %0AYear: %0ASeason (if applicable): %0AEpisode: %0AThanks!"
-         target="_blank"
-         >Submit a Movie or Show Request</a>
+    <button class="button" onclick="window.open('mailto:jadonanthonyc@gmail.com?subject=Movie/Show Request&body=Enter title, year, and episode/season (if TV show):', '_blank')">Submit a Movie or Show Request</button>
 
-      <a href="mailto:jadonanthonyc@gmail.com?subject=NivoTV Support Request&body=I'm experiencing the following issue:%0A%0AThanks for your help!"
-         target="_blank"
-         >Contact Customer Support</a>
+    <button class="button" onclick="window.open('mailto:jadonanthonyc@gmail.com?subject=Customer Support&body=Describe your issue or question:', '_blank')">Contact Customer Support</button>
+
+    <div class="benefits">
+      <div class="benefit-box">All-Inclusive Access. Just $4.99/month.</div>
+      <div class="benefit-box">Stream in HD. No Ads. Instant Playback.</div>
+      <div class="benefit-box">Unlimited Requests. Any Movie or Show. Anytime.</div>
     </div>
 
-    <div class="how-to-watch-links">
-      <p style="background: #1f2937; padding: 15px; border-left: 5px solid #8b5cf6; border-radius: 8px; font-size: 0.95rem;">
-        <strong>To watch on your devices:</strong><br>
-        1. Download the official <strong>Jellyfin</strong> app.<br>
-        2. When prompted, enter <strong>nivotv.com</strong> as your custom server name.<br>
-        Works on iPhone, Android, Smart TVs, Fire Stick, Windows, and more.
-      </p>
+    <div class="carousel-container">
+      <h2>Trending Now</h2>
+      <div class="carousel">
+        <div style="position: relative;">
+          <span class="number-label">1</span>
+          <img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/movie1.jpg" alt="1" />
+        </div>
+        <div style="position: relative;">
+          <span class="number-label">2</span>
+          <img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/movie2.jpg" alt="2" />
+        </div>
+        <div style="position: relative;">
+          <span class="number-label">3</span>
+          <img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/movie3.jpg" alt="3" />
+        </div>
+        <div style="position: relative;">
+          <span class="number-label">4</span>
+          <img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/movie4.jpg" alt="4" />
+        </div>
+        <div style="position: relative;">
+          <span class="number-label">5</span>
+          <img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/movie5.jpg" alt="5" />
+        </div>
+      </div>
     </div>
+
+    <div class="how-to-connect">
+      <strong>To watch on your devices:</strong><br>
+      1. Download the official <strong>Jellyfin</strong> app.<br>
+      2. When prompted, enter <strong>nivotv.com</strong> as your custom server name.<br>
+      Works on iPhone, Android, Smart TVs, Fire Stick, Windows, and more.
+    </div>
+
+    <footer>
+      Powered by Jellyfin
+      <div class="how-to-watch-links">
+        <a href="https://play.google.com/store/apps/details?id=org.jellyfin.mobile" target="_blank">Google Play</a>
+        <a href="https://apps.apple.com/us/app/jellyfin-mobile/id1480192618" target="_blank">App Store</a>
+        <a href="https://apps.microsoft.com/detail/jellyfin/9NBLGGH42THS" target="_blank">Windows</a>
+        <a href="https://f-droid.org/packages/org.jellyfin.mobile/" target="_blank">F-Droid</a>
+        <a href="https://jellyfin.org/docs/general/clients/" target="_blank">More Platforms</a>
+      </div>
+    </footer>
   </main>
-
-  <footer>
-    Powered by Jellyfin
-    <div class="how-to-watch-links">
-      <a href="https://play.google.com/store/apps/details?id=org.jellyfin.mobile" target="_blank">Google Play</a>
-      <a href="https://apps.apple.com/us/app/jellyfin-mobile/id1480192618" target="_blank">App Store</a>
-      <a href="https://apps.microsoft.com/detail/jellyfin/9NBLGGH42THS" target="_blank">Windows</a>
-      <a href="https://f-droid.org/packages/org.jellyfin.mobile/" target="_blank">F-Droid</a>
-      <a href="https://jellyfin.org/docs/general/clients/" target="_blank">More Platforms</a>
-    </div>
-  </footer>
 </body>
 </html>
