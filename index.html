@@ -61,69 +61,27 @@
     p.sub {
       color: #ccc;
     }
-    .benefits {
+    .form-wrapper {
       display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: space-between;
+      justify-content: center;
       margin: 40px 0;
     }
-    .benefit-box {
-      flex: 1;
-      min-width: 250px;
-      background: #2e2e4e;
-      border-radius: 12px;
-      padding: 20px;
-      text-align: center;
-      font-size: 1.1rem;
-      font-weight: 500;
-    }
-    .carousel {
-      display: flex;
-      overflow-x: auto;
-      gap: 10px;
-      margin: 20px 0;
-    }
-    .carousel-item {
+    .form-box {
+      width: 100%;
+      max-width: 500px;
+      height: 540px;
+      border-radius: 16px;
+      overflow: hidden;
       position: relative;
     }
-    .carousel img {
-      height: 200px;
-      border-radius: 10px;
-    }
-    .poster-number {
-      position: absolute;
-      top: 8px;
-      left: 8px;
-      background: rgba(0,0,0,0.7);
-      font-size: 1.5rem;
-      font-weight: 700;
-      padding: 4px 10px;
-      border-radius: 8px;
-    }
-    .how-to-connect {
-      background: #1f2937;
-      color: #e0e0ff;
-      padding: 15px;
-      border-left: 5px solid #8b5cf6;
-      font-weight: 500;
-      border-radius: 8px;
-      margin-top: 10px;
-      line-height: 1.6;
-    }
-    .iframe-container {
-      margin: 40px 0;
-      width: 100%;
-      height: 600px;
-      border: none;
-      border-radius: 12px;
-      overflow: hidden;
-    }
-    iframe {
+    .form-box iframe {
       width: 100%;
       height: 100%;
       border: none;
       background-color: transparent;
+    }
+    .form-box iframe::-webkit-scrollbar {
+      display: none;
     }
     footer {
       font-size: 0.9rem;
@@ -155,44 +113,13 @@
     <h1>Welcome to NivoTV</h1>
     <p class="sub">Watch Anywhere. Anytime. No Ads.</p>
 
-    <!-- Sign-Up Form -->
-    <div class="iframe-container">
-      <iframe src="https://tally.so/r/mDYErq?transparentBackground=1&hideTitle=1" title="Sign Up"></iframe>
-    </div>
-
-    <!-- Benefits -->
-    <div class="benefits">
-      <div class="benefit-box">All-Inclusive Access. Just $4.99/month. Forever.</div>
-      <div class="benefit-box">Stream in HD. No Ads. Instant Playback.</div>
-      <div class="benefit-box">Unlimited Requests. Any Movie or Show. Anytime.</div>
-    </div>
-
-    <!-- Trending Now -->
-    <h2>Trending Now</h2>
-    <div class="carousel">
-      <div class="carousel-item"><span class="poster-number">1</span><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/refs/heads/main/Posters/movie1.jpg" alt="Movie 1"></div>
-      <div class="carousel-item"><span class="poster-number">2</span><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/refs/heads/main/Posters/movie2.jpg" alt="Movie 2"></div>
-      <div class="carousel-item"><span class="poster-number">3</span><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/refs/heads/main/Posters/movie3.jpg" alt="Movie 3"></div>
-      <div class="carousel-item"><span class="poster-number">4</span><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/refs/heads/main/Posters/movie4.jpg" alt="Movie 4"></div>
-      <div class="carousel-item"><span class="poster-number">5</span><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/refs/heads/main/Posters/movie5.jpg" alt="Movie 5"></div>
-    </div>
-
-    <!-- Device Instructions -->
-    <div class="how-to-connect">
-      To watch on your devices:<br>
-      1. Download the official <strong>Jellyfin</strong> app.<br>
-      2. When prompted, enter <strong>nivotv.com</strong> as your custom server name.<br>
-      Works on iPhone, Android, Smart TVs, Fire Stick, Windows, and more.
-    </div>
-
-    <!-- Request Form -->
-    <div class="iframe-container">
-      <iframe src="https://tally.so/r/w4g0GA?transparentBackground=1&hideTitle=1" title="Request Form"></iframe>
-    </div>
-
-    <!-- Support Form -->
-    <div class="iframe-container">
-      <iframe src="https://tally.so/r/mOPK7o?transparentBackground=1&hideTitle=1" title="Customer Support"></iframe>
+    <div class="form-wrapper">
+      <div class="form-box">
+        <iframe 
+          src="https://tally.so/r/mDYErq?transparentBackground=1&hideTitle=1" 
+          title="Sign Up Form"
+        ></iframe>
+      </div>
     </div>
   </main>
 
