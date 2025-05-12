@@ -93,9 +93,22 @@
       gap: 10px;
       margin: 20px 0;
     }
+    .carousel-item {
+      position: relative;
+    }
     .carousel img {
-      height: 150px;
+      height: 200px;
       border-radius: 10px;
+    }
+    .poster-number {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      background: rgba(0,0,0,0.7);
+      font-size: 1.5rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 8px;
     }
     .benefits {
       display: flex;
@@ -156,15 +169,15 @@
   </header>
 
   <main>
-    <div class="form-container">
+    <form class="form-container" action="https://formspree.io/f/xdorblba" method="POST">
       <h1>Welcome to NivoTV</h1>
       <p class="sub">Watch Anywhere. Anytime. No Ads.</p>
-      <input type="email" placeholder="Email" required>
-      <input type="text" placeholder="Username" required>
-      <input type="password" placeholder="Password" required>
-      <button onclick="document.getElementById('signup-message').style.display='block'">Get Started</button>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="text" name="username" placeholder="Username" required>
+      <input type="password" name="password" placeholder="Password" required>
+      <button type="submit">Get Started</button>
       <div id="signup-message" class="form-message">Thank you! You're all set to start watching.</div>
-    </div>
+    </form>
 
     <div class="benefits-container">
       <div class="benefits">
@@ -177,9 +190,11 @@
     <div class="form-container">
       <h2>Trending Now</h2>
       <div class="carousel">
-        <img src="https://image.tmdb.org/t/p/w300/zrIkN8pz1JXfdNmmfOduL1g0U6Y.jpg" alt="Dune">
-        <img src="https://image.tmdb.org/t/p/w300/ab8dkKZ5fIh1htrRJ5QDwQwifKT.jpg" alt="John Wick">
-        <img src="https://image.tmdb.org/t/p/w300/4Md1Uo1I4k5mVx0Lr7yVZVZzWlo.jpg" alt="The Northman">
+        <div class="carousel-item"><span class="poster-number">1</span><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/refs/heads/main/Posters/movie1.jpg" alt="Movie 1"></div>
+        <div class="carousel-item"><span class="poster-number">2</span><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/refs/heads/main/Posters/movie2.jpg" alt="Movie 2"></div>
+        <div class="carousel-item"><span class="poster-number">3</span><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/refs/heads/main/Posters/movie3.jpg" alt="Movie 3"></div>
+        <div class="carousel-item"><span class="poster-number">4</span><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/refs/heads/main/Posters/movie4.jpg" alt="Movie 4"></div>
+        <div class="carousel-item"><span class="poster-number">5</span><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/refs/heads/main/Posters/movie5.jpg" alt="Movie 5"></div>
       </div>
       <div class="how-to-connect">
         To watch on your devices:<br>
@@ -189,25 +204,25 @@
       </div>
     </div>
 
-    <div class="request-container">
+    <form class="request-container" action="https://formspree.io/f/xdorblba" method="POST">
       <h2>Request a Movie or Show</h2>
-      <input type="text" placeholder="Username" required>
-      <input type="text" placeholder="Title" required>
-      <input type="text" placeholder="Year" required>
-      <input type="text" placeholder="Season (if movie leave blank)" required>
-      <input type="text" placeholder="Episode (if movie leave blank)" required>
-      <button onclick="document.getElementById('request-message').style.display='block'">Submit Request</button>
+      <input type="text" name="username" placeholder="Username" required>
+      <input type="text" name="title" placeholder="Title" required>
+      <input type="text" name="year" placeholder="Year" required>
+      <input type="text" name="season" placeholder="Season (if movie leave blank)" required>
+      <input type="text" name="episode" placeholder="Episode (if movie leave blank)" required>
+      <button type="submit">Submit Request</button>
       <div id="request-message" class="form-message">Thanks! Your request will be met shortly. We'll send you an email when it's ready!</div>
-    </div>
+    </form>
 
-    <div class="support-container">
+    <form class="support-container" action="https://formspree.io/f/xdorblba" method="POST">
       <h2>Customer Support</h2>
-      <input type="text" placeholder="Username" required>
-      <input type="email" placeholder="Email" required>
-      <textarea rows="4" placeholder="Questions or Concerns..." required></textarea>
-      <button onclick="document.getElementById('support-message').style.display='block'">Send</button>
+      <input type="text" name="username" placeholder="Username" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <textarea name="message" rows="4" placeholder="Questions or Concerns..." required></textarea>
+      <button type="submit">Send</button>
       <div id="support-message" class="form-message">Thank you! Your message has been received.</div>
-    </div>
+    </form>
 
     <footer>
       Powered by Jellyfin
