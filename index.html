@@ -4,64 +4,237 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>NivoTV</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
     body {
-      background-color: #0e0f2a;
-      color: white;
-      font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      padding: 0;
-      text-align: center;
-    }
-    .logo {
-      font-size: 2.2rem;
-      font-weight: bold;
-      padding: 1rem;
-    }
-    .headline {
-      font-size: 2rem;
-      margin-top: 0.5rem;
-    }
-    .subtext {
-      font-size: 1.1rem;
-      margin-bottom: 2rem;
-    }
-    .button {
-      background-color: #8022e0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #1a1a2e, #16213e);
       color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      width: 100%;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 900px;
+    }
+
+    .logo {
+      font-family: 'Pacifico', cursive;
+      font-size: 2rem;
+      color: #fff;
+    }
+
+    .watch-now {
+      background: #5b21b6;
       border: none;
-      padding: 1rem 2rem;
-      margin: 0.75rem auto;
-      display: block;
-      width: 80%;
-      max-width: 480px;
-      font-size: 1.2rem;
-      border-radius: 12px;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 999px;
       cursor: pointer;
       text-decoration: none;
+    }
+
+    main {
+      width: 100%;
+      max-width: 900px;
+      padding-top: 30px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    p.sub {
+      color: #ccc;
+      margin-bottom: 30px;
+    }
+
+    .button {
+      background: #8b5cf6;
+      border: none;
+      color: white;
+      padding: 15px;
+      border-radius: 12px;
+      cursor: pointer;
       font-weight: bold;
-    }
-    .button:hover {
-      background-color: #9a41ff;
-    }
-    .email-info {
-      margin: 2rem auto;
+      margin-bottom: 15px;
+      width: 100%;
+      max-width: 500px;
       font-size: 1rem;
-      color: #cccccc;
+      text-align: center;
+      text-decoration: none;
+      display: block;
+    }
+
+    .button:hover {
+      background: #7c3aed;
+    }
+
+    .carousel {
+      display: flex;
+      overflow-x: auto;
+      gap: 15px;
+      margin: 30px 0;
+    }
+
+    .carousel img {
+      height: 200px;
+      border-radius: 10px;
+      position: relative;
+    }
+
+    .carousel-container {
+      width: 100%;
+    }
+
+    .number-label {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      background: black;
+      color: white;
+      padding: 2px 8px;
+      font-weight: bold;
+      font-size: 1.2rem;
+      border-radius: 6px;
+    }
+
+    .benefits {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+      margin: 30px 0;
+    }
+
+    .benefit-box {
+      flex: 1;
+      min-width: 250px;
+      background: #2e2e4e;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+
+    .how-to-connect {
+      background: #1f2937;
+      color: #e0e0ff;
+      padding: 15px;
+      border-left: 5px solid #8b5cf6;
+      font-weight: 500;
+      border-radius: 8px;
+      margin: 40px auto;
+      line-height: 1.6;
+      max-width: 800px;
+    }
+
+    footer {
+      font-size: 0.9rem;
+      color: #aaa;
+      margin: 50px 0 20px;
+      text-align: center;
+    }
+
+    .how-to-watch-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .how-to-watch-links a {
+      color: #8b5cf6;
+      text-decoration: none;
+    }
+
+    .email-instructions {
+      margin-top: 20px;
+      font-size: 1rem;
+      color: #ccc;
+      text-align: center;
       max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
     }
   </style>
 </head>
 <body>
-  <div class="logo">NivoTV</div>
-  <div class="headline">Welcome to NivoTV</div>
-  <div class="subtext">Watch Anywhere. Anytime. No Ads.</div>
+  <header>
+    <div class="logo">NivoTV</div>
+    <a href="https://nivotv.com" class="watch-now" target="_blank">Watch Now</a>
+  </header>
 
-  <a class="button" href="https://buy.stripe.com/7sI2bfeki1V82JO8wz" target="_blank">Subscribe for $4.99</a>
+  <main>
+    <h1>Welcome to NivoTV</h1>
+    <p class="sub">Watch Anywhere. Anytime. No Ads.</p>
 
-  <div class="email-info">
-    After subscribing, please send your desired username and password to <b>jadonanthonyc@gmail.com</b> to complete your account setup.<br><br>
-    You may also use the same email for submitting show requests or contacting support.
-  </div>
+    <a class="button" href="https://buy.stripe.com/7sI2bfeki1V82JO8wz" target="_blank">Subscribe – $4.99 / Month</a>
+
+    <div class="email-instructions">
+      After subscribing, send your desired username and password to <strong>jadonanthonyc@gmail.com</strong> to activate your account.<br><br>
+      You may also use this email to request movies or get support.
+    </div>
+
+    <div class="carousel-container">
+      <h2>Coming Soon</h2>
+      <div class="carousel">
+        <div style="position: relative;">
+          <span class="number-label">1</span>
+          <img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/movie1.jpg" alt="1" />
+        </div>
+        <div style="position: relative;">
+          <span class="number-label">2</span>
+          <img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/movie2.jpg" alt="2" />
+        </div>
+        <div style="position: relative;">
+          <span class="number-label">3</span>
+          <img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/movie3.jpg" alt="3" />
+        </div>
+        <div style="position: relative;">
+          <span class="number-label">4</span>
+          <img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/movie4.jpg" alt="4" />
+        </div>
+        <div style="position: relative;">
+          <span class="number-label">5</span>
+          <img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/movie5.jpg" alt="5" />
+        </div>
+      </div>
+    </div>
+
+    <div class="benefits">
+      <div class="benefit-box">All-Inclusive Access. Just $4.99/month.</div>
+      <div class="benefit-box">Stream in HD. No Ads. Instant Playback.</div>
+      <div class="benefit-box">Unlimited Requests. Any Movie or Show. Anytime.</div>
+    </div>
+
+    <div class="how-to-connect">
+      <strong>To watch on your devices:</strong><br>
+      1. Download the official <strong>Jellyfin</strong> app.<br>
+      2. When prompted, enter <strong>nivotv.com</strong> as your custom server name.<br>
+      Works on iPhone, Android, Smart TVs, Fire Stick, Windows, and more.
+    </div>
+
+    <footer>
+      Powered by Jellyfin
+      <div class="how-to-watch-links">
+        <a href="https://play.google.com/store/apps/details?id=org.jellyfin.mobile" target="_blank">Google Play</a>
+        <a href="https://apps.apple.com/us/app/jellyfin-mobile/id1480192618" target="_blank">App Store</a>
+        <a href="https://apps.microsoft.com/detail/jellyfin/9NBLGGH42THS" target="_blank">Windows</a>
+        <a href="https://f-droid.org/packages/org.jellyfin.mobile/" target="_blank">F-Droid</a>
+        <a href="https://jellyfin.org/docs/general/clients/" target="_blank">More Platforms</a>
+      </div>
+    </footer>
+  </main>
 </body>
 </html>
