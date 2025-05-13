@@ -81,21 +81,27 @@
       background: #7c3aed;
     }
 
+    .carousel-container {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+    }
+
     .carousel {
       display: flex;
-      overflow-x: auto;
       gap: 15px;
-      margin: 30px 0;
+      overflow-x: scroll;
+      scroll-behavior: smooth;
+      padding: 20px 0;
+    }
+
+    .carousel::-webkit-scrollbar {
+      display: none;
     }
 
     .carousel img {
       height: 200px;
       border-radius: 10px;
-      position: relative;
-    }
-
-    .carousel-container {
-      width: 100%;
     }
 
     .number-label {
@@ -108,6 +114,28 @@
       font-weight: bold;
       font-size: 1.2rem;
       border-radius: 6px;
+    }
+
+    .carousel-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.5);
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      padding: 10px 15px;
+      border-radius: 999px;
+      cursor: pointer;
+      z-index: 10;
+    }
+
+    .carousel-left {
+      left: 10px;
+    }
+
+    .carousel-right {
+      right: 10px;
     }
 
     .benefits {
@@ -190,37 +218,33 @@
       You may also use this email to request movies, shows or get support. Your request will be fulfilled within 24 hours. We'll email you when it's ready!
     </div>
 
-    <!-- 🔥 WHAT OTHERS ARE WATCHING SECTION -->
+    <!-- 🔥 WHAT OTHERS ARE WATCHING -->
     <div class="carousel-container">
       <h2>What Others Are Watching</h2>
-      <div class="carousel">
-        <div style="position: relative;"><span class="number-label">1</span><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/trending1.jpg" alt="Trending 1" /></div>
-        <div style="position: relative;"><span class="number-label">2</span><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/trending2.jpg" alt="Trending 2" /></div>
-        <div style="position: relative;"><span class="number-label">3</span><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/trending3.jpg" alt="Trending 3" /></div>
-        <div style="position: relative;"><span class="number-label">4</span><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/trending4.jpg" alt="Trending 4" /></div>
-        <div style="position: relative;"><span class="number-label">5</span><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/trending5.jpg" alt="Trending 5" /></div>
-        <div style="position: relative;"><span class="number-label">6</span><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/trending6.jpg" alt="Trending 6" /></div>
-        <div style="position: relative;"><span class="number-label">7</span><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/trending7.jpg" alt="Trending 7" /></div>
-        <div style="position: relative;"><span class="number-label">8</span><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/trending8.jpg" alt="Trending 8" /></div>
-        <div style="position: relative;"><span class="number-label">9</span><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/trending9.jpg" alt="Trending 9" /></div>
-        <div style="position: relative;"><span class="number-label">10</span><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/trending10.jpg" alt="Trending 10" /></div>
+      <button class="carousel-nav carousel-left" onclick="scrollCarousel('trending', -1)">❮</button>
+      <button class="carousel-nav carousel-right" onclick="scrollCarousel('trending', 1)">❯</button>
+      <div class="carousel" id="carousel-trending">
+        ${[...Array(10)].map((_, i) => `
+          <div style="position: relative;">
+            <span class="number-label">${i + 1}</span>
+            <img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/trending${i + 1}.jpg" alt="Trending ${i + 1}" />
+          </div>
+        `).join('')}
       </div>
     </div>
 
-    <!-- 🎬 COMING SOON SECTION -->
+    <!-- 🎬 COMING SOON -->
     <div class="carousel-container">
       <h2>Coming Soon</h2>
-      <div class="carousel">
-        <div style="position: relative;"><span class="number-label">1</span><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/movie1.jpg" alt="Movie 1" /></div>
-        <div style="position: relative;"><span class="number-label">2</span><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/movie2.jpg" alt="Movie 2" /></div>
-        <div style="position: relative;"><span class="number-label">3</span><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/movie3.jpg" alt="Movie 3" /></div>
-        <div style="position: relative;"><span class="number-label">4</span><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/movie4.jpg" alt="Movie 4" /></div>
-        <div style="position: relative;"><span class="number-label">5</span><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/movie5.jpg" alt="Movie 5" /></div>
-        <div style="position: relative;"><span class="number-label">6</span><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/movie6.jpg" alt="Movie 6" /></div>
-        <div style="position: relative;"><span class="number-label">7</span><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/movie7.jpg" alt="Movie 7" /></div>
-        <div style="position: relative;"><span class="number-label">8</span><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/movie8.jpg" alt="Movie 8" /></div>
-        <div style="position: relative;"><span class="number-label">9</span><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/movie9.jpg" alt="Movie 9" /></div>
-        <div style="position: relative;"><span class="number-label">10</span><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/movie10.jpg" alt="Movie 10" /></div>
+      <button class="carousel-nav carousel-left" onclick="scrollCarousel('coming', -1)">❮</button>
+      <button class="carousel-nav carousel-right" onclick="scrollCarousel('coming', 1)">❯</button>
+      <div class="carousel" id="carousel-coming">
+        ${[...Array(10)].map((_, i) => `
+          <div style="position: relative;">
+            <span class="number-label">${i + 1}</span>
+            <img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/movie${i + 1}.jpg" alt="Movie ${i + 1}" />
+          </div>
+        `).join('')}
       </div>
     </div>
 
@@ -248,5 +272,14 @@
       </div>
     </footer>
   </main>
+
+  <script>
+    function scrollCarousel(type, direction) {
+      const id = type === 'trending' ? 'carousel-trending' : 'carousel-coming';
+      const carousel = document.getElementById(id);
+      const scrollAmount = carousel.offsetWidth * 0.8;
+      carousel.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+    }
+  </script>
 </body>
 </html>
