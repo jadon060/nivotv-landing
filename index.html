@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>NivoTV</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
     body {
@@ -88,10 +89,15 @@
 
     .carousel {
       display: flex;
-      overflow: hidden;
+      overflow-x: auto;
       gap: 15px;
       margin: 30px 0;
       scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .carousel::-webkit-scrollbar {
+      display: none;
     }
 
     .carousel img {
@@ -110,29 +116,6 @@
       font-weight: bold;
       font-size: 1.2rem;
       border-radius: 6px;
-    }
-
-    .carousel-nav {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: #111;
-      border: none;
-      color: white;
-      font-size: 2rem;
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      cursor: pointer;
-      z-index: 1;
-    }
-
-    .carousel-nav.left {
-      left: -20px;
-    }
-
-    .carousel-nav.right {
-      right: -20px;
     }
 
     .benefits {
@@ -218,7 +201,6 @@
     <!-- 🔥 WHAT OTHERS ARE WATCHING SECTION -->
     <div class="carousel-container">
       <h2>What Others Are Watching</h2>
-      <button class="carousel-nav left" onclick="scrollCarousel('carousel-trending', -1)">&#8249;</button>
       <div class="carousel" id="carousel-trending">
         <div style="position: relative;"><span class="number-label">1</span><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/trending1.jpg" alt="Trending 1" /></div>
         <div style="position: relative;"><span class="number-label">2</span><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/trending2.jpg" alt="Trending 2" /></div>
@@ -231,13 +213,11 @@
         <div style="position: relative;"><span class="number-label">9</span><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/trending9.jpg" alt="Trending 9" /></div>
         <div style="position: relative;"><span class="number-label">10</span><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/trending10.jpg" alt="Trending 10" /></div>
       </div>
-      <button class="carousel-nav right" onclick="scrollCarousel('carousel-trending', 1)">&#8250;</button>
     </div>
 
     <!-- 🎬 COMING SOON SECTION -->
     <div class="carousel-container">
       <h2>Coming Soon</h2>
-      <button class="carousel-nav left" onclick="scrollCarousel('carousel-coming', -1)">&#8249;</button>
       <div class="carousel" id="carousel-coming">
         <div style="position: relative;"><span class="number-label">1</span><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/movie1.jpg" alt="Movie 1" /></div>
         <div style="position: relative;"><span class="number-label">2</span><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/movie2.jpg" alt="Movie 2" /></div>
@@ -250,7 +230,6 @@
         <div style="position: relative;"><span class="number-label">9</span><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/movie9.jpg" alt="Movie 9" /></div>
         <div style="position: relative;"><span class="number-label">10</span><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/movie10.jpg" alt="Movie 10" /></div>
       </div>
-      <button class="carousel-nav right" onclick="scrollCarousel('carousel-coming', 1)">&#8250;</button>
     </div>
 
     <div class="benefits">
