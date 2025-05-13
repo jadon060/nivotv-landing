@@ -82,26 +82,22 @@
     }
 
     .carousel-container {
-      position: relative;
       width: 100%;
-      overflow: hidden;
+      position: relative;
     }
 
     .carousel {
       display: flex;
+      overflow: hidden;
       gap: 15px;
-      overflow-x: scroll;
+      margin: 30px 0;
       scroll-behavior: smooth;
-      padding: 20px 0;
-    }
-
-    .carousel::-webkit-scrollbar {
-      display: none;
     }
 
     .carousel img {
       height: 200px;
       border-radius: 10px;
+      position: relative;
     }
 
     .number-label {
@@ -120,22 +116,23 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      background: rgba(0, 0, 0, 0.5);
+      background: #111;
       border: none;
       color: white;
-      font-size: 1.5rem;
-      padding: 10px 15px;
-      border-radius: 999px;
+      font-size: 2rem;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
       cursor: pointer;
-      z-index: 10;
+      z-index: 1;
     }
 
-    .carousel-left {
-      left: 10px;
+    .carousel-nav.left {
+      left: -20px;
     }
 
-    .carousel-right {
-      right: 10px;
+    .carousel-nav.right {
+      right: -20px;
     }
 
     .benefits {
@@ -218,34 +215,24 @@
       You may also use this email to request movies, shows or get support. Your request will be fulfilled within 24 hours. We'll email you when it's ready!
     </div>
 
-    <!-- 🔥 WHAT OTHERS ARE WATCHING -->
+    <!-- 🔥 WHAT OTHERS ARE WATCHING SECTION -->
     <div class="carousel-container">
       <h2>What Others Are Watching</h2>
-      <button class="carousel-nav carousel-left" onclick="scrollCarousel('trending', -1)">❮</button>
-      <button class="carousel-nav carousel-right" onclick="scrollCarousel('trending', 1)">❯</button>
+      <button class="carousel-nav left" onclick="scrollCarousel('trending', -1)">&#8249;</button>
       <div class="carousel" id="carousel-trending">
-        ${[...Array(10)].map((_, i) => `
-          <div style="position: relative;">
-            <span class="number-label">${i + 1}</span>
-            <img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/trending${i + 1}.jpg" alt="Trending ${i + 1}" />
-          </div>
-        `).join('')}
+        ${[...Array(10)].map((_, i) => `<div style="position: relative;"><span class="number-label">${i + 1}</span><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/trending${i + 1}.jpg" alt="Trending ${i + 1}" /></div>`).join('')}
       </div>
+      <button class="carousel-nav right" onclick="scrollCarousel('trending', 1)">&#8250;</button>
     </div>
 
-    <!-- 🎬 COMING SOON -->
+    <!-- 🎬 COMING SOON SECTION -->
     <div class="carousel-container">
       <h2>Coming Soon</h2>
-      <button class="carousel-nav carousel-left" onclick="scrollCarousel('coming', -1)">❮</button>
-      <button class="carousel-nav carousel-right" onclick="scrollCarousel('coming', 1)">❯</button>
+      <button class="carousel-nav left" onclick="scrollCarousel('coming', -1)">&#8249;</button>
       <div class="carousel" id="carousel-coming">
-        ${[...Array(10)].map((_, i) => `
-          <div style="position: relative;">
-            <span class="number-label">${i + 1}</span>
-            <img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/movie${i + 1}.jpg" alt="Movie ${i + 1}" />
-          </div>
-        `).join('')}
+        ${[...Array(10)].map((_, i) => `<div style="position: relative;"><span class="number-label">${i + 1}</span><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/movie${i + 1}.jpg" alt="Movie ${i + 1}" /></div>`).join('')}
       </div>
+      <button class="carousel-nav right" onclick="scrollCarousel('coming', 1)">&#8250;</button>
     </div>
 
     <div class="benefits">
@@ -274,11 +261,11 @@
   </main>
 
   <script>
-    function scrollCarousel(type, direction) {
-      const id = type === 'trending' ? 'carousel-trending' : 'carousel-coming';
+    function scrollCarousel(section, direction) {
+      const id = section === 'trending' ? 'carousel-trending' : 'carousel-coming';
       const carousel = document.getElementById(id);
-      const scrollAmount = carousel.offsetWidth * 0.8;
-      carousel.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+      const scrollAmount = 220;
+      carousel.scrollLeft += direction * scrollAmount;
     }
   </script>
 </body>
