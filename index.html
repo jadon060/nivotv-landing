@@ -91,7 +91,6 @@
     .carousel img {
       height: 200px;
       border-radius: 10px;
-      position: relative;
     }
     .number-label {
       position: absolute;
@@ -103,6 +102,25 @@
       font-weight: bold;
       font-size: 1.2rem;
       border-radius: 6px;
+    }
+    .scroll-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.6);
+      border: none;
+      color: white;
+      padding: 10px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      border-radius: 50%;
+      z-index: 1;
+    }
+    .scroll-button.left {
+      left: -30px;
+    }
+    .scroll-button.right {
+      right: -30px;
     }
     .benefits {
       display: flex;
@@ -166,46 +184,47 @@
     <div class="logo">NivoTV</div>
     <a href="https://nivotv.com" class="watch-now" target="_blank">Watch Now</a>
   </header>
+
   <main>
     <h1>Welcome to NivoTV</h1>
     <p class="sub">Watch Anywhere. Anytime. No Ads.</p>
+
     <a class="button" href="https://buy.stripe.com/7sI2bfeki1V82JO8wz" target="_blank">Subscribe – $4.99 / Month</a>
+
     <div class="email-instructions">
       After subscribing, send your desired username and password to <strong>stream.nivotv@gmail.com</strong> to activate your account.<br><br>
       You may also use this email to request movies, shows or get support. Your request will be fulfilled within 24 hours. We'll email you when it's ready!
     </div>
 
-    <!-- 🔥 WHAT OTHERS ARE WATCHING SECTION -->
+    <!-- 🔥 WHAT OTHERS ARE WATCHING -->
     <div class="carousel-container">
       <h2>What Others Are Watching</h2>
+      <button class="scroll-button left" onclick="scrollCarousel('carousel-trending', -1)">❮</button>
       <div class="carousel" id="carousel-trending">
-        <div style="position: relative;"><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/trending1.jpg" alt="Final Destination" /></div>
-        <div style="position: relative;"><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/trending13.jpg" alt="Minecraft" /></div>
-        <div style="position: relative;"><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/trending3.jpg" alt="SnowWhite" /></div>
-        <div style="position: relative;"><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/trending4.jpg" alt="Ugly Stepsister" /></div>
-        <div style="position: relative;"><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/trending5.jpg" alt="Summer of 69" /></div>
-        <div style="position: relative;"><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/trending6.jpg" alt="Captain America" /></div>
-        <div style="position: relative;"><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/trending7.jpg" alt="Robin" /></div>
-        <div style="position: relative;"><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/trending8.jpg" alt="Drop" /></div>
-        <div style="position: relative;"><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/trending9.jpg" alt="Death of Unicorn" /></div>
-        <div style="position: relative;"><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/trending10.jpg" alt="Guardians of Galapagos" /></div>
+        <img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/trending11.jpg" alt="Final Destination" />
+        <img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/trending13.jpg" alt="Minecraft" />
+        <img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/trending3.jpg" alt="Snow White" />
+        <img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/trending4.jpg" alt="Ugly Stepsister" />
+        <img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/trending5.jpg" alt="Summer of 69" />
+        <img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/trending6.jpg" alt="Captain America" />
       </div>
+      <button class="scroll-button right" onclick="scrollCarousel('carousel-trending', 1)">❯</button>
     </div>
 
-    <!-- 🎬 COMING SOON SECTION -->
+    <!-- 🎬 COMING SOON -->
     <div class="carousel-container">
       <h2>Coming Soon</h2>
+      <button class="scroll-button left" onclick="scrollCarousel('carousel-coming', -1)">❮</button>
       <div class="carousel" id="carousel-coming">
-        <div style="position: relative;"><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/movie11.jpg" alt="Thunderbolts" /></div>
-        <div style="position: relative;"><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/movie1.jpg" alt="The Accountant 2" /></div>
-        <div style="position: relative;"><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/movie2.jpg" alt="Rosario" /></div>
-        <div style="position: relative;"><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/movie6.jpg" alt="The Last of Us" /></div>
-        <div style="position: relative;"><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/movie7.jpg" alt="Andor" /></div>
-        <div style="position: relative;"><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/movie8.jpg" alt="Beyond the Gates" /></div>
-        <div style="position: relative;"><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/movie9.jpg" alt="Mysteries" /></div>
-        <div style="position: relative;"><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/movie10.jpg" alt="Eva Longoria" /></div>
-        <div style="position: relative;"><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/movie5.jpg" alt="Sinners" /></div>
+        <img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/movie2.jpg" alt="Sinners" />
+        <img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/movie11.jpg" alt="Thunderbolts" />
+        <img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/movie1.jpg" alt="The Accountant" />
+        <img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/movie6.jpg" alt="The Last of Us" />
+        <img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/movie7.jpg" alt="Andor" />
+        <img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/movie8.jpg" alt="Beyond the Gates" />
+        <img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/movie9.jpg" alt="Mysteries" />
       </div>
+      <button class="scroll-button right" onclick="scrollCarousel('carousel-coming', 1)">❯</button>
     </div>
 
     <div class="benefits">
@@ -232,6 +251,7 @@
       </div>
     </footer>
   </main>
+
   <script>
     function scrollCarousel(id, dir) {
       const el = document.getElementById(id);
