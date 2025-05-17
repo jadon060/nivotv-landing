@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>NivoTV</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
@@ -16,7 +16,6 @@
       flex-direction: column;
       align-items: center;
     }
-
     header {
       width: 100%;
       padding: 20px;
@@ -25,13 +24,11 @@
       align-items: center;
       max-width: 900px;
     }
-
     .logo {
       font-size: 2rem;
       font-weight: 800;
       color: #fff;
     }
-
     .watch-now {
       background: #5b21b6;
       border: none;
@@ -41,24 +38,20 @@
       cursor: pointer;
       text-decoration: none;
     }
-
     main {
       width: 100%;
       max-width: 900px;
       padding-top: 30px;
       text-align: center;
     }
-
     h1 {
       font-size: 2.2rem;
       margin-bottom: 10px;
     }
-
     p.sub {
       color: #ccc;
       margin-bottom: 30px;
     }
-
     .button {
       background: #8b5cf6;
       border: none;
@@ -77,17 +70,13 @@
       margin-left: auto;
       margin-right: auto;
     }
-
     .button:hover {
       background: #7c3aed;
     }
-
     .carousel-container {
       width: 100%;
       position: relative;
-      text-align: center;
     }
-
     .carousel {
       display: flex;
       overflow-x: auto;
@@ -96,17 +85,14 @@
       scroll-behavior: smooth;
       -webkit-overflow-scrolling: touch;
     }
-
     .carousel::-webkit-scrollbar {
       display: none;
     }
-
     .carousel img {
       height: 200px;
       border-radius: 10px;
       position: relative;
     }
-
     .number-label {
       position: absolute;
       top: 8px;
@@ -118,30 +104,6 @@
       font-size: 1.2rem;
       border-radius: 6px;
     }
-
-    .scroll-btn {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: rgba(0,0,0,0.6);
-      border: none;
-      color: white;
-      font-size: 1.5rem;
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      cursor: pointer;
-      z-index: 1;
-    }
-
-    .scroll-btn.left {
-      left: -10px;
-    }
-
-    .scroll-btn.right {
-      right: -10px;
-    }
-
     .benefits {
       display: flex;
       flex-wrap: wrap;
@@ -149,7 +111,6 @@
       justify-content: center;
       margin: 30px 0;
     }
-
     .benefit-box {
       flex: 1;
       min-width: 250px;
@@ -160,7 +121,6 @@
       font-size: 1.1rem;
       font-weight: 500;
     }
-
     .how-to-connect {
       background: #1f2937;
       color: #e0e0ff;
@@ -172,14 +132,12 @@
       line-height: 1.6;
       max-width: 800px;
     }
-
     footer {
       font-size: 0.9rem;
       color: #aaa;
       margin: 50px 0 20px;
       text-align: center;
     }
-
     .how-to-watch-links {
       display: flex;
       flex-wrap: wrap;
@@ -187,12 +145,10 @@
       justify-content: center;
       margin-top: 10px;
     }
-
     .how-to-watch-links a {
       color: #8b5cf6;
       text-decoration: none;
     }
-
     .email-instructions {
       margin-top: 20px;
       font-size: 1rem;
@@ -210,13 +166,10 @@
     <div class="logo">NivoTV</div>
     <a href="https://nivotv.com" class="watch-now" target="_blank">Watch Now</a>
   </header>
-
   <main>
     <h1>Welcome to NivoTV</h1>
     <p class="sub">Watch Anywhere. Anytime. No Ads.</p>
-
     <a class="button" href="https://buy.stripe.com/7sI2bfeki1V82JO8wz" target="_blank">Subscribe – $4.99 / Month</a>
-
     <div class="email-instructions">
       After subscribing, send your desired username and password to <strong>stream.nivotv@gmail.com</strong> to activate your account.<br><br>
       You may also use this email to request movies, shows or get support. Your request will be fulfilled within 24 hours. We'll email you when it's ready!
@@ -225,40 +178,34 @@
     <!-- 🔥 WHAT OTHERS ARE WATCHING SECTION -->
     <div class="carousel-container">
       <h2>What Others Are Watching</h2>
-      <button class="scroll-btn left" onclick="scrollCarousel('carousel-trending', -1)">❮</button>
       <div class="carousel" id="carousel-trending">
-        <img src="Posters/trending1.jpg" />
-        <img src="Posters/trending2.jpg" />
-        <img src="Posters/trending3.jpg" />
-        <img src="Posters/trending4.jpg" />
-        <img src="Posters/trending5.jpg" />
-        <img src="Posters/trending6.jpg" />
-        <img src="Posters/trending7.jpg" />
-        <img src="Posters/trending8.jpg" />
-        <img src="Posters/trending9.jpg" />
-        <img src="Posters/trending10.jpg" />
-        <img src="Posters/trending11.jpg" />
-        <img src="Posters/trending12.jpg" />
-        <img src="Posters/trending13.jpg" />
+        <div style="position: relative;"><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/trending1.jpg" alt="Final Destination" /></div>
+        <div style="position: relative;"><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/trending13.jpg" alt="Minecraft" /></div>
+        <div style="position: relative;"><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/trending3.jpg" alt="SnowWhite" /></div>
+        <div style="position: relative;"><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/trending4.jpg" alt="Ugly Stepsister" /></div>
+        <div style="position: relative;"><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/trending5.jpg" alt="Summer of 69" /></div>
+        <div style="position: relative;"><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/trending6.jpg" alt="Captain America" /></div>
+        <div style="position: relative;"><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/trending7.jpg" alt="Robin" /></div>
+        <div style="position: relative;"><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/trending8.jpg" alt="Drop" /></div>
+        <div style="position: relative;"><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/trending9.jpg" alt="Death of Unicorn" /></div>
+        <div style="position: relative;"><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/trending10.jpg" alt="Guardians of Galapagos" /></div>
       </div>
-      <button class="scroll-btn right" onclick="scrollCarousel('carousel-trending', 1)">❯</button>
     </div>
 
     <!-- 🎬 COMING SOON SECTION -->
     <div class="carousel-container">
       <h2>Coming Soon</h2>
-      <button class="scroll-btn left" onclick="scrollCarousel('carousel-coming', -1)">❮</button>
       <div class="carousel" id="carousel-coming">
-        <img src="Posters/movie1.jpg" />
-        <img src="Posters/movie2.jpg" />
-        <img src="Posters/movie6.jpg" />
-        <img src="Posters/movie7.jpg" />
-        <img src="Posters/movie8.jpg" />
-        <img src="Posters/movie9.jpg" />
-        <img src="Posters/movie10.jpg" />
-        <img src="Posters/movie11.jpg" />
+        <div style="position: relative;"><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/movie11.jpg" alt="Thunderbolts" /></div>
+        <div style="position: relative;"><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/movie1.jpg" alt="The Accountant 2" /></div>
+        <div style="position: relative;"><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/movie2.jpg" alt="Rosario" /></div>
+        <div style="position: relative;"><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/movie6.jpg" alt="The Last of Us" /></div>
+        <div style="position: relative;"><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/movie7.jpg" alt="Andor" /></div>
+        <div style="position: relative;"><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/movie8.jpg" alt="Beyond the Gates" /></div>
+        <div style="position: relative;"><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/movie9.jpg" alt="Mysteries" /></div>
+        <div style="position: relative;"><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/movie10.jpg" alt="Eva Longoria" /></div>
+        <div style="position: relative;"><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/movie5.jpg" alt="Sinners" /></div>
       </div>
-      <button class="scroll-btn right" onclick="scrollCarousel('carousel-coming', 1)">❯</button>
     </div>
 
     <div class="benefits">
@@ -285,7 +232,6 @@
       </div>
     </footer>
   </main>
-
   <script>
     function scrollCarousel(id, dir) {
       const el = document.getElementById(id);
