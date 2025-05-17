@@ -85,6 +85,7 @@
     .carousel-container {
       width: 100%;
       position: relative;
+      max-width: 900px;
     }
 
     .carousel {
@@ -94,6 +95,7 @@
       margin: 30px 0;
       scroll-behavior: smooth;
       -webkit-overflow-scrolling: touch;
+      padding: 0 40px;
     }
 
     .carousel::-webkit-scrollbar {
@@ -116,6 +118,33 @@
       font-weight: bold;
       font-size: 1.2rem;
       border-radius: 6px;
+    }
+
+    .scroll-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.5);
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 1;
+      border-radius: 50%;
+      transition: background 0.3s;
+    }
+
+    .scroll-button:hover {
+      background: rgba(0, 0, 0, 0.8);
+    }
+
+    .scroll-left {
+      left: 5px;
+    }
+
+    .scroll-right {
+      right: 5px;
     }
 
     .benefits {
@@ -201,36 +230,21 @@
     <!-- 🔥 WHAT OTHERS ARE WATCHING SECTION -->
     <div class="carousel-container">
       <h2>What Others Are Watching</h2>
+      <button class="scroll-button scroll-left" onclick="scrollCarousel('carousel-trending', -1)">&#8249;</button>
       <div class="carousel" id="carousel-trending">
-        <div style="position: relative;"><span class="number-label">1</span><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/trending11.jpg" alt="Final Destination" /></div>
-        <div style="position: relative;"><span class="number-label">2</span><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/trending13.jpg" alt="Minecraft" /></div>
-        <div style="position: relative;"><span class="number-label">3</span><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/trending1.jpg" alt="Trending 1" /></div>
-        <div style="position: relative;"><span class="number-label">4</span><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/trending2.jpg" alt="Trending 2" /></div>
-        <div style="position: relative;"><span class="number-label">5</span><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/trending3.jpg" alt="Trending 3" /></div>
-        <div style="position: relative;"><span class="number-label">6</span><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/trending4.jpg" alt="Trending 4" /></div>
-        <div style="position: relative;"><span class="number-label">7</span><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/trending5.jpg" alt="Trending 5" /></div>
-        <div style="position: relative;"><span class="number-label">8</span><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/trending6.jpg" alt="Trending 6" /></div>
-        <div style="position: relative;"><span class="number-label">9</span><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/trending7.jpg" alt="Trending 7" /></div>
-        <div style="position: relative;"><span class="number-label">10</span><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/trending9.jpg" alt="Trending 9" /></div>
-        <!-- REMOVED: trending8.jpg (woman in yard) -->
-        <!-- REMOVED: trending10.jpg (last breath) -->
+        <!-- your posters like trending11.jpg, trending13.jpg, etc -->
       </div>
+      <button class="scroll-button scroll-right" onclick="scrollCarousel('carousel-trending', 1)">&#8250;</button>
     </div>
 
     <!-- 🎬 COMING SOON SECTION -->
     <div class="carousel-container">
       <h2>Coming Soon</h2>
+      <button class="scroll-button scroll-left" onclick="scrollCarousel('carousel-coming', -1)">&#8249;</button>
       <div class="carousel" id="carousel-coming">
-        <div style="position: relative;"><span class="number-label">1</span><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/movie11.jpg" alt="Thunderbolts" /></div>
-        <div style="position: relative;"><span class="number-label">2</span><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/movie1.jpg" alt="Movie 1" /></div>
-        <div style="position: relative;"><span class="number-label">3</span><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/movie2.jpg" alt="Movie 2" /></div>
-        <div style="position: relative;"><span class="number-label">4</span><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/trending12.jpg" alt="Sinners" /></div>
-        <div style="position: relative;"><span class="number-label">5</span><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/movie6.jpg" alt="Movie 6" /></div>
-        <div style="position: relative;"><span class="number-label">6</span><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/movie7.jpg" alt="Movie 7" /></div>
-        <div style="position: relative;"><span class="number-label">7</span><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/movie8.jpg" alt="Movie 8" /></div>
-        <div style="position: relative;"><span class="number-label">8</span><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/movie9.jpg" alt="Movie 9" /></div>
-        <div style="position: relative;"><span class="number-label">9</span><img src="https://raw.githubusercontent.com/jadon060/nivotv-landing/main/Posters/movie10.jpg" alt="Movie 10" /></div>
+        <!-- your posters like movie11.jpg, movie1.jpg, etc -->
       </div>
+      <button class="scroll-button scroll-right" onclick="scrollCarousel('carousel-coming', 1)">&#8250;</button>
     </div>
 
     <div class="benefits">
@@ -261,7 +275,7 @@
   <script>
     function scrollCarousel(id, dir) {
       const el = document.getElementById(id);
-      const scrollAmount = 220;
+      const scrollAmount = 300;
       el.scrollLeft += dir * scrollAmount;
     }
   </script>
